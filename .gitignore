@@ -79,4 +79,4 @@ umd
 dist
 
 # Development test harness
-testharness.js
+# testharness.js
