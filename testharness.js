@@ -13,19 +13,14 @@ const model = fs.readFileSync(modelPath, 'utf8');
 
 const modelManager = new ModelManager();
 
-const updateExternalModels = async () => {
-  modelManager.addCTOModel(model);
-  await modelManager.updateExternalModels();
-  modelManager.validateModelFiles();
-}
+modelManager.addCTOModel(model);
+modelManager.updateExternalModels();
+modelManager.validateModelFiles();
 
 const parameters = {
   fileWriter: new FileWriter('./output/rust')
 };
 const visitor = new Visitor();
 
-(async () => {
-  await updateExternalModels();
-  modelManager.accept(visitor, parameters);
-  console.log('Done');
-})();
+modelManager.accept(visitor, parameters);
+console.log('Done');

@@ -1,7 +1,7 @@
 namespace org.accordproject.helloworld@0.14.0
 
-import org.accordproject.contract.* from https://models.accordproject.org/accordproject/contract.cto
-import org.accordproject.runtime.* from https://models.accordproject.org/accordproject/runtime.cto
+import org.accordproject.contract.* from https://models.accordproject.org/accordproject/contract@0.2.0
+import org.accordproject.runtime.* from https://models.accordproject.org/accordproject/runtime.cto@0.2.0
 
 transaction MyRequest extends Request {
   o String input
