@@ -1,0 +1,4 @@
+namespace test@1.0.0
+concept Person {
+  o String name
+}

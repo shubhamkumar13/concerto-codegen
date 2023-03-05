@@ -77,3 +77,6 @@ umd
 
 # TypeScript build folder
 dist
+
+# Development test harness
+testharness.js
