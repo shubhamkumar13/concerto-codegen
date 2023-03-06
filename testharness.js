@@ -7,13 +7,16 @@ const { FileWriter } = require('@accordproject/concerto-util');
 
 const Visitor = require('./lib/codegen/fromcto/rust/rustvisitor');
 
-const modelPath = './testharness/model-helloworld.cto';
-// const modelPath = './testharness/model-minimal.cto';
+//const modelPath = './testharness/model-helloworld.cto';
+const modelPath = './testharness/model-minimal.cto';
+// const modelPath = './testharness/contract.cto';
+
 const model = fs.readFileSync(modelPath, 'utf8');
 
 const modelManager = new ModelManager();
 
 modelManager.addCTOModel(model);
+// modelManager.addModelFiles(['./testharness/contract.cto', './testharness/model-helloworld.cto', './testharness/runtime.cto']);
 modelManager.updateExternalModels();
 modelManager.validateModelFiles();
 
