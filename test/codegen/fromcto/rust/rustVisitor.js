@@ -731,7 +731,7 @@ describe('RustVisitor', function () {
                 ],
                 [
                     1,
-                    "Utc.datetime_from_str(&datetime_str, \"%Y-%m-%dT%H:%M:%S%.3fZ\").map_err(serde::de::Error::custom)"
+                    "Utc.datetime_from_str(&datetime_str, \"%Y-%m-%dT%H:%M:%S%.3f%Z\").map_err(serde::de::Error::custom)"
                 ],
                 [
                     0,
@@ -759,7 +759,7 @@ describe('RustVisitor', function () {
                 ],
                 [
                     1,
-                    "let datetime_str = datetime.format(\"%Y-%m-%dT%H:%M:%S%.3fZ\").to_string();"
+                    "let datetime_str = datetime.format(\"%+\").to_string();"
                 ],
                 [
                     1,
